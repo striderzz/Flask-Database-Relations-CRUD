@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+
+ <div class="container mt-5">
+  <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <h1> Have a puppy that needs to be adopted? </h1>
+        <p> Add a new puppy to our databse!</p>
+        <form method="POST">
+          {{form.hidden_tag()}}
+          {{form.name.label}}{{form.name()}}
+          {{form.submit()}}
+
+        </form>
+      </div>
+  </div>
+</div>
+
+{% endblock %}

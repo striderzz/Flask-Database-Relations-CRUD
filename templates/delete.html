@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+
+ <div class="container mt-5">
+  <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <h1>Did a puppy get adopted? </h1>
+        <p>If so: Please fill out their id to remove them from the database</p>
+
+        <form method="POST">
+           {{ form.hidden_tag()}}
+           {{ form.id.label }}{{ form.id()}}
+           {{ form.submit() }}
+        </form>
+      </div>
+  </div>
+</div>
+
+{% endblock %}
